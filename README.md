@@ -31,6 +31,11 @@ const client = new MereMemoryClient( app_port, cell_agent_hash, "storage", dna_h
 const memory_addr = await client.save( bytes );
 const memory = await client.remember( memory_addr );
 
+client.setSigningHandler( async zome_call_request => {
+    zome_call_request = someSigningFunction( zome_call_request );
+    return zome_call_request;
+});
+
 expect( memory ).to.deep.equal( bytes );
 ```
 
