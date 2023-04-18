@@ -1,6 +1,6 @@
 {
   "name": "@whi/mere-memory-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Javascript SDK for the Mere Memory Zome (Holochain)",
   "type": "module",
   "main": "src/index.js",
