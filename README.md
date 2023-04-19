@@ -28,13 +28,13 @@ import { MereMemoryClient } from '@whi/mere-memory-sdk';
 ```javascript
 const client = new MereMemoryClient( app_port, cell_agent_hash, "storage", dna_hash );
 
-const memory_addr = await client.save( bytes );
-const memory = await client.remember( memory_addr );
-
 client.setSigningHandler( async zome_call_request => {
-    zome_call_request = someSigningFunction( zome_call_request );
+    zome_call_request.signature = someSigningFunction( zome_call_request );
     return zome_call_request;
 });
+
+const memory_addr = await client.save( bytes );
+const memory = await client.remember( memory_addr );
 
 expect( memory ).to.deep.equal( bytes );
 ```
