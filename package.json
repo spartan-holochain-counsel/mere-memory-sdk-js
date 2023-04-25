@@ -22,11 +22,11 @@
   },
   "dependencies": {
     "@whi/essence": "^0.1.3",
-    "@whi/holochain-agent-client": "^0.2.0",
+    "@whi/holochain-agent-client": "^0.2.4",
     "@whi/weblogger": "^0.1.6"
   },
   "devDependencies": {
-    "@whi/holochain-admin-client": "^0.1.3",
+    "@whi/holochain-admin-client": "^0.1.5",
     "@whi/holochain-backdrop": "^2.0.1",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",

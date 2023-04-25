@@ -9,19 +9,19 @@ node_modules:		package-lock.json
 	touch $@
 build:			node_modules
 
-use-local-admin-client:
-	cd tests; npm uninstall @whi/holochain-admin-client
-	cd tests; npm install --save ../../holochain-admin-client-js/
-use-npm-admin-client:
-	cd tests; npm uninstall @whi/holochain-admin-client
-	cd tests; npm install --save @whi/holochain-admin-client
-
 use-local-agent-client:
 	cd tests; npm uninstall @whi/holochain-agent-client
 	cd tests; npm install --save ../../holochain-agent-client-js/
 use-npm-agent-client:
 	cd tests; npm uninstall @whi/holochain-agent-client
 	cd tests; npm install --save @whi/holochain-agent-client
+
+use-local-admin-client:
+	cd tests; npm uninstall @whi/holochain-admin-client
+	cd tests; npm install --save-dev ../../holochain-admin-client-js/
+use-npm-admin-client:
+	cd tests; npm uninstall @whi/holochain-admin-client
+	cd tests; npm install --save-dev @whi/holochain-admin-client
 
 use-local-backdrop:
 	cd tests; npm uninstall @whi/holochain-backdrop

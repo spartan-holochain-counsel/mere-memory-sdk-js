@@ -3,7 +3,7 @@ const log				= new Logger("test-basic", process.env.LOG_LEVEL );
 
 import {
     AgentClient,
-    HoloHash,
+    HoloHashes,
     logging,
 }					from '@whi/holochain-agent-client';
 import Essence				from '@whi/essence';
@@ -109,7 +109,7 @@ export class MereMemoryClient {
 		},
 		"bytes": chunk,
 	    });
-	    block_addresses.push( new HoloHash( response ) );
+	    block_addresses.push( new HoloHashes.HoloHash( response ) );
 	}
 
 	let hash			= new Array(32).fill(0);
@@ -119,7 +119,7 @@ export class MereMemoryClient {
 	    "memory_size":	source.length,
 	});
 
-	return new HoloHash( response );
+	return new HoloHashes.HoloHash( response );
     }
 
     async remember ( addr ) {
