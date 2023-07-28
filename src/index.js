@@ -1,11 +1,11 @@
 import { Logger }			from '@whi/weblogger';
-const log				= new Logger("test-basic", process.env.LOG_LEVEL );
+const log				= new Logger("test-basic", typeof process === "undefined" || process.env.LOG_LEVEL );
 
 import {
     AgentClient,
     HoloHashes,
     logging,
-}					from '@whi/holochain-agent-client';
+}					from '@spartan-hc/holochain-agent-client';
 import Essence				from '@whi/essence';
 
 // logging();
@@ -141,4 +141,9 @@ export class MereMemoryClient {
     async close () {
 	await this._client.close();
     }
+}
+
+export default {
+    Chunker,
+    MereMemoryClient,
 }

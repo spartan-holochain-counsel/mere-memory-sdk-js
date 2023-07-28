@@ -10,25 +10,25 @@ node_modules:		package-lock.json
 build:			node_modules
 
 use-local-agent-client:
-	cd tests; npm uninstall @whi/holochain-agent-client
+	cd tests; npm uninstall @spartan-hc/holochain-agent-client
 	cd tests; npm install --save ../../holochain-agent-client-js/
 use-npm-agent-client:
-	cd tests; npm uninstall @whi/holochain-agent-client
-	cd tests; npm install --save @whi/holochain-agent-client
+	cd tests; npm uninstall @spartan-hc/holochain-agent-client
+	cd tests; npm install --save @spartan-hc/holochain-agent-client
 
 use-local-admin-client:
-	cd tests; npm uninstall @whi/holochain-admin-client
+	cd tests; npm uninstall @spartan-hc/holochain-admin-client
 	cd tests; npm install --save-dev ../../holochain-admin-client-js/
 use-npm-admin-client:
-	cd tests; npm uninstall @whi/holochain-admin-client
-	cd tests; npm install --save-dev @whi/holochain-admin-client
+	cd tests; npm uninstall @spartan-hc/holochain-admin-client
+	cd tests; npm install --save-dev @spartan-hc/holochain-admin-client
 
 use-local-backdrop:
-	cd tests; npm uninstall @whi/holochain-backdrop
+	cd tests; npm uninstall @spartan-hc/holochain-backdrop
 	cd tests; npm install --save-dev ../../node-holochain-backdrop/
 use-npm-backdrop:
-	cd tests; npm uninstall @whi/holochain-backdrop
-	cd tests; npm install --save-dev @whi/holochain-backdrop
+	cd tests; npm uninstall @spartan-hc/holochain-backdrop
+	cd tests; npm install --save-dev @spartan-hc/holochain-backdrop
 
 
 #
@@ -45,7 +45,10 @@ test-integration:	build test-setup
 	LOG_LEVEL=warn npx mocha ./tests/integration
 test-integration-debug:	build test-setup
 	LOG_LEVEL=trace npx mocha ./tests/integration
-test-setup:
+test-setup:		tests/storage.happ
+
+tests/storage.happ:	../zome-mere-memory/packs/app/Storage.happ
+	cp $< $@
 
 
 #
@@ -67,7 +70,7 @@ clean-files-all-force:	clean-remove-chaff
 # NPM
 #
 prepare-package:
-	rm dist/*
+	rm -f dist/*
 	npx webpack
 	MODE=production npx webpack
 	gzip -kf dist/*.js

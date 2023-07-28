@@ -6,10 +6,10 @@ import path				from 'path';
 import nacl				from 'tweetnacl';
 import { expect }			from 'chai';
 
-import { AdminClient }			from '@whi/holochain-admin-client';
-import { hashZomeCall }			from '@whi/holochain-agent-client';
-import { Holochain }			from '@whi/holochain-backdrop';
-import { AgentPubKey }			from '@whi/holo-hash';
+import { AdminClient }			from '@spartan-hc/holochain-admin-client';
+import { hashZomeCall }			from '@spartan-hc/holochain-agent-client';
+import { Holochain }			from '@spartan-hc/holochain-backdrop';
+import { AgentPubKey }			from '@spartan-hc/holo-hash';
 
 import { large_byte_array,
 	 expect_reject }		from '../utils.js';

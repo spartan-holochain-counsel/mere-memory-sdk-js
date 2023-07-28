@@ -9,7 +9,7 @@
 A class for communicating with Conductor's App interface with a specific Agent.
 
 - `connection` - (*required*) either
-  - an instance of [`Connection`](https://github.com/mjbrisebois/holochain-websocket-js/blob/master/docs/API_Connection.md)
+  - an instance of [`Connection`](https://github.com/spartan-holochain-counsel/holochain-websocket-js/blob/master/docs/API_Connection.md)
   - or, it is used as the input for `new Connection( connection )`
 - `agent` - (*required*) a 39 byte `Uint8Array` that is an `AgentPubKey`
 - `role_name` - (*required*) a string of the role name for the cell with the mere memory zomes

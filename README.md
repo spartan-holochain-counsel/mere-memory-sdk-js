@@ -1,11 +1,11 @@
-[![](https://img.shields.io/npm/v/@whi/mere-memory-sdk/latest?style=flat-square)](http://npmjs.com/package/@whi/mere-memory-sdk)
+[![](https://img.shields.io/npm/v/@spartan-hc/mere-memory-sdk/latest?style=flat-square)](http://npmjs.com/package/@spartan-hc/mere-memory-sdk)
 
 # Mere Memory SDK
 A Javascript SDK for the Mere Memory Zome (Holochain).
 
-[![](https://img.shields.io/github/issues-raw/mjbrisebois/mere-memory-sdk-js?style=flat-square)](https://github.com/mjbrisebois/mere-memory-sdk-js/issues)
-[![](https://img.shields.io/github/issues-closed-raw/mjbrisebois/mere-memory-sdk-js?style=flat-square)](https://github.com/mjbrisebois/mere-memory-sdk-js/issues?q=is%3Aissue+is%3Aclosed)
-[![](https://img.shields.io/github/issues-pr-raw/mjbrisebois/mere-memory-sdk-js?style=flat-square)](https://github.com/mjbrisebois/mere-memory-sdk-js/pulls)
+[![](https://img.shields.io/github/issues-raw/spartan-holochain-counsel/mere-memory-sdk-js?style=flat-square)](https://github.com/spartan-holochain-counsel/mere-memory-sdk-js/issues)
+[![](https://img.shields.io/github/issues-closed-raw/spartan-holochain-counsel/mere-memory-sdk-js?style=flat-square)](https://github.com/spartan-holochain-counsel/mere-memory-sdk-js/issues?q=is%3Aissue+is%3Aclosed)
+[![](https://img.shields.io/github/issues-pr-raw/spartan-holochain-counsel/mere-memory-sdk-js?style=flat-square)](https://github.com/spartan-holochain-counsel/mere-memory-sdk-js/pulls)
 
 
 ## Overview
@@ -13,14 +13,14 @@ A Javascript SDK for the Mere Memory Zome (Holochain).
 ## Install
 
 ```bash
-npm i @whi/mere-memory-sdk
+npm i @spartan-hc/mere-memory-sdk
 ```
 
 ## Usage
 
 ### Import
 ```javascript
-import { MereMemoryClient } from '@whi/mere-memory-sdk';
+import { MereMemoryClient } from '@spartan-hc/mere-memory-sdk';
 ```
 
 ### Simplest
